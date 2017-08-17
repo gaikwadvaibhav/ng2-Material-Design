@@ -1,0 +1,38 @@
+<div class="container"> 
+  <div class="row"> 
+    <div class="col-md-12"> 
+      <h3>  Attribute directives</h3>
+     </div>  
+    <div>
+    <input type="text" [ngStyle]="{'border=':'1px solid '+ textColor }"> 
+  </div>
+     <div [ngClass] ="{ well : isWell }">
+        Codekul Bitcoin 
+         <input type="text" (ngModel)="textColor"/>
+     </div>
+     <input type="button" value="Toggle" (click)="isWell = !isWell"/>
+  </div>
+</div>
+
+<!--<div class="container"> -->
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Structural Directive</h1>
+    <h1 *ngIf="Show">Structural Directive</h1><hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" *ngIf="Show"> 
+    <input type="button" value ="Button" (click)="Show = !Show"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ul>
+      <li *ngFor="let mob of mobiles">{{mob}}</li>
+    </ul>
+  </div>
+</div>
+<!--</div>-->

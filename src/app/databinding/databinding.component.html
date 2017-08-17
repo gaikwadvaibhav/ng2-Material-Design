@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>CodeKul - Angular</h3>
+      <hr>
+    </div>
+  </div>
+<!--interpolation binding-->
+  <div class="row">
+    <div class="col-md-12">
+      <h3>1.Interpolation data binding</h3> 
+     <div >
+       Component Name = {{componentName}}
+     </div>
+     <div>
+       Two + 2 = {{addition()}}
+     </div>
+     <div>
+       Condition Statement ={{addition() < 1 ? "Okayy" : "Good"}}
+       <!--Only use ternary operator-->
+       <!--We cant use here other statement like for, while , if loops-->
+        </div>
+      </div>
+          
+
+   </div>
+    <hr> 
+  <!--Data Binding-->
+     
+        <div class="row">
+          <div class="col-md-12">
+              <h3>2.Property binding </h3>
+
+               <div  > <input type="{{iptype}}" value="Okayy"></div> <br>
+
+               <div [style.border]="'1px solid red'"> <input type="{{iptype}}" value="Ohhkayy"></div><br>
+            
+               <div [style.border]="border"><input [type]="iptype" value = "Oky">  </div> 
+                    <h4> Event Binding </h4>
+               <div><input type="Button" value ="PlayColor" (click)="changeBorder()"> <= Event Binding</div>  
+          </div>
+        </div> 
+      </div>
+ 
+       
+ <hr>
+
+<!--Custum attribute or own property in own component -->
+
+  <div><app-is Add="'In Pune'"> </app-is></div>
+  
+<!--************-->
+
+<!--Event Binding-->
+<!--<div class="row">
+  <div class="container">
+    <h2> Event Binding </h2>
+    <div><input type="Button" value ="PlayColor" (click)="changeBorder()"> </div>  
+    <div> <input type="text" [style.width]="dynawd" (mouseenter)="dynawd='300px'" (mouseleave )="dynawd='200px'"> </div>
+  </div>
+</div>-->
+<hr>
+<div class="container">
+<div>
+  <h2>Event Binding </h2>
+  <app-op (ommiter) = "mydata($event)"> </app-op>
+  Today's  Date is => {{outdata}}  
+</div>
+</div>
+<hr> 
+
+<div class="col-md-12"> 
+  <h3> Inter Component Communication</h3>  
+    <div>
+        <app-former (formEv)="control = $event"></app-former>
+    </div> 
+    <div>
+      <app-grasper [ipCtl]="control"> </app-grasper>
+    </div>
+</div> 
+
+ <hr>

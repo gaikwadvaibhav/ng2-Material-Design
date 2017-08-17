@@ -1,0 +1,9 @@
+ .bg{
+    font-family: cursive;
+    background-color: lightgrey;
+}
+.demo-list .figure-wrap figcaption {
+  margin-top: .5em;
+  margin-bottom: 1em; }
+ figcaption  {
+  display: block; }
