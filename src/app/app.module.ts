@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { SidebarModule } from 'ng-sidebar';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+
+
 
 
 
@@ -22,6 +26,10 @@ import { DirectiveComponent } from './directive/directive.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GoogleloginComponent } from './googlelogin/googlelogin.component';
 import { DatapikerComponent } from './datapiker/datapiker.component';
+import { DashComponent } from './dash/dash.component';
+import { ForgetPassComponent } from './forget-pass/forget-pass.component';
+import { LoginComponent } from './login/login.component';
+import { MyRoutingModule } from "app/app.router";
 
 
 @NgModule({
@@ -41,13 +49,20 @@ import { DatapikerComponent } from './datapiker/datapiker.component';
     DirectiveComponent,
     SidebarComponent,
     GoogleloginComponent,
-    DatapikerComponent
+    DatapikerComponent,
+    DashComponent,
+    ForgetPassComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     SidebarModule.forRoot(),
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MdButtonModule, 
+    MdCheckboxModule,
+    MyRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

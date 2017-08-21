@@ -51,7 +51,7 @@
           </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in" (click)="onLogin(em.value,pass.value)"></span> Login</a></li>
         </ul>
       </div>
     </div>   
@@ -119,6 +119,14 @@
 <!-- <app-googlelogin> </app-googlelogin>  -->
 <div class="container"> 
 <div class="row"> 
-    <app-datapiker> </app-datapiker>
+    <!-- <app-datapiker> </app-datapiker> -->
+    <!-- <app-googlelogin> </app-googlelogin> -->
+    <!-- <app-login> </app-login> -->
 </div>
+</div>
+
+<div class="container">  
+      <div class="col-md-3">  
+          <router-outlet></router-outlet>
+      </div>  
 </div>
